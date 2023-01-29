@@ -1,0 +1,20 @@
+<root-portal>
+  <view wx:if="{{rendered}}">
+    <view data-show="{{show}}" class="sheet-modal-mask" catch:touchstart="handleCloseSheetModal"></view>
+    <view data-show="{{show}}" class="sheet-modal">
+      <view class="sheet-modal-header">
+        <view class="sheet-modal-title">
+          <text>{{title}}</text>
+        </view>
+        <view wx:if="{{okButton}}" class="sheet-modal-header-btn" hover-class="sheet-modal-header-btn-hover" bind:tap="handleClickOkBtn">
+          <text>{{okButtonText}}</text>
+        </view>
+      </view>
+      <view class="sheet-modal-content">
+        <scroll-view scroll-y="true">
+          <slot></slot>
+        </scroll-view>
+      </view>
+    </view>
+  </view>
+</root-portal>

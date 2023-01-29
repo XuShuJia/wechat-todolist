@@ -1,0 +1,6 @@
+<view class="setting-item">
+  <view wx:if="{{title !== undefined}}" class="setting-title">{{title}}</view>
+  <view class="setting-content" >
+    <slot></slot>
+  </view>
+</view>

@@ -1,0 +1,8 @@
+<view class="header-bar">
+  <view class="title">
+    <text>{{title}}</text>
+  </view>
+  <view class="time">
+    <text>{{time}}</text>
+  </view>
+</view>

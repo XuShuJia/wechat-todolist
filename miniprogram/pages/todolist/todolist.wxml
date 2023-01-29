@@ -1,0 +1,43 @@
+<view>
+  <header-bar/>
+  <todo-list>
+    <todo-item
+      wx:for="{{todoList}}"
+      wx:for-item="todoItem"
+      todoId="{{todoItem.id}}"
+      todoTitle="{{todoItem.title}}"
+      todoNote="{{todoItem.note}}"
+      todoCompleted="{{todoItem.completed}}"
+      bind:edit="handleEditTodoItem"
+    />
+  </todo-list>
+  <view wx:if="{{todoList.length === 0}}" class="empty-list-message">
+    <text>没有待办事项</text>
+  </view>
+  <view class="add-todo-button">
+    <button bind:tap="handleOpenTodoSheetModal" hover-class="add-todo-button-hover">新待办事项</button>
+  </view>
+  <!-- add todo ,edit todo -->
+  <sheet-modal
+    okButton
+    open="{{openTodoSheetModal}}"
+    title="{{todoSheetModalTitle}}"
+    bind:ok="handleTodoSettingModalOk"
+    bind:close="handleCloseTodoSheetModal"
+  >
+    <setting-item title="标题">
+      <input type="text" model:value="{{editTodoItemTitle}}"/>
+    </setting-item>
+    <setting-item title="备注">
+      <textarea type="text" model:value="{{editTodoItemNote}}"/>
+    </setting-item>
+    <setting-item title="状态">
+      <checkbox model:checked="{{editTodoItemCompleted}}">
+        <text>完成事项</text>
+      </checkbox>
+    </setting-item>
+    <setting-item wx:if="{{editTodoItemId}}" title="操作">
+      <button type="warn" bind:tap="handleDelTodoItem">删除此待办事项</button>
+    </setting-item>
+  </sheet-modal>
+</view>

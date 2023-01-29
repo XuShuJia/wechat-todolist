@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "sheet-modal": "../../components/sheet-modal/sheet-modal",
+    "header-bar": "components/header-bar/header-bar",
+    "todo-item": "components/todo-item/todo-item",
+    "todo-list": "components/todo-list/todo-list",
+    "setting-item": "components/setting-item/setting-item"
+  }
+}

@@ -1,0 +1,13 @@
+<view class="todo-item" bind:tap="handleClickTodoItem">
+  <view class="todo-item-left">
+    <!-- <checkbox /> -->
+  </view>
+  <view class="todo-item-right">
+    <view class="todo-item-title">
+      <text>{{todoTitle}}</text>
+    </view>
+    <view class="todo-item-note">
+      <text>{{todoNote}}</text>
+    </view>
+  </view>
+</view>

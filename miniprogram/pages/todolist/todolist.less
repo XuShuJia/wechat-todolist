@@ -1,0 +1,33 @@
+.test-box {
+  width: 100rpx;
+  height: 100rpx;
+  background: #ffffff;
+  margin-bottom: 20rpx;
+}
+.empty-list-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #dddddd;
+}
+.add-todo-button {
+  position: fixed;
+  z-index: 3;
+  left: 0;
+  right: 0;
+  bottom: 80rpx;
+  & > button {
+    padding: 22rpx 36rpx;
+    font-size: 32rpx;
+    border-radius: 72rpx;
+    background: #0191ff;
+    color: #ffffff;
+    box-shadow: 0 10rpx 30rpx rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+  }
+}
+.add-todo-button-hover {
+  background: #0188f0;
+  transform: scale(0.96);
+}
